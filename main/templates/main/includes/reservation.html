@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+  <h2>Бронь</h2>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Бронировать</button>
+  </form>
+{% endblock %}
+
+{% block extra %}
+  <h2>Бронирование прошло успешно</h2>
+  <p>Your booking has been successfully created!</p>
+{% endblock %}
